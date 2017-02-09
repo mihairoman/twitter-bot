@@ -4,7 +4,8 @@ var http = require('http'),
     port = (process.env.PORT || 3000);
 
 var server = http.createServer(function(req, res) {
-    twitterBot.init(15, 15);
+    //init with retweet frequency and favorite tweets frequency (in minutes)
+    twitterBot.init(60, 60);
 });
 
 server.listen(port, hostname, function() {

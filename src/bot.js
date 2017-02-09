@@ -8,11 +8,7 @@ var sentiment = require('./helpers/sentiment');
 var Twitter = new Twit(config);
 // STREAM API for interacting with a USER =======
 // set up a user stream
-var stream = Twitter.stream('user')
-
-// // Frequency in minutes
-// var retweetFrequency = 15;
-// var favoriteFrequency = 15;
+var stream = Twitter.stream('user');
 
 // RANDOM QUERY STRING  =========================
 var qs = ura(querries.queryString);

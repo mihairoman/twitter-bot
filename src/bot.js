@@ -79,11 +79,11 @@ exports = module.exports = (function() {
                     }
                     // if there was an error while tweeting
                     if (err) {
-                        err.log('RETWEET ERROR! Duplication maybe...:', err, 'Query String:', paramQS)
+                        console.error('RETWEET ERROR! Duplication maybe...:', err, 'Query String:', paramQS)
                     }
                 })
             } else {
-                err.log('Something went wrong while SEARCHING...')
+                console.error('Something went wrong while SEARCHING...')
             }
         });
     };
@@ -126,7 +126,7 @@ exports = module.exports = (function() {
                 }, function(err, response) {
                     // if there was an error while 'favorite'
                     if (err) {
-                        err.log('CANNOT BE FAVORITE... Error: ', err, ' Query String: ' + paramQS);
+                        console.error('CANNOT BE FAVORITE... Error: ', err, ' Query String: ' + paramQS);
                     } else {
                         console.log('FAVORITED... Success!!!', ' Query String: ' + paramQS);
                     }
@@ -162,7 +162,7 @@ exports = module.exports = (function() {
         } else {
             Twitter.post('statuses/update', tweet, function(err, data, response) {
                 if (err) {
-                    err.log('Cannot Reply to Follower. ERROR!: ' + err);
+                    console.error('Cannot Reply to Follower. ERROR!: ' + err);
                 } else {
                     console.log('Reply to follower. SUCCESS!');
                 }

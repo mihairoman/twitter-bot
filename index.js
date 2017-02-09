@@ -1,1 +1,2 @@
-require('./src/bot')
+var twitterBot = require('./src/bot');
+twitterBot.init(15, 15);

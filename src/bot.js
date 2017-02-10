@@ -141,6 +141,7 @@ exports = module.exports = (function() {
             find = 'screenName',
             regex = new RegExp(find, 'g');
         responseString = responseString.replace(regex, screenName)
+        console.log('####################################### RESPONSE STRING', responseString);
 
         // function that replies back to every USER who followed for the first time
         tweetNow(responseString)
@@ -168,11 +169,12 @@ exports = module.exports = (function() {
 
     return {
         init: function(retweetFrequency, favoriteFrequency) {
+            console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ STREAM', stream);
+            stream.on('follow', followed);
             retweet();
             setInterval(retweet, 1000 * 60 * retweetFrequency);
             favoriteTweet();
             setInterval(favoriteTweet, 1000 * 60 * favoriteFrequency);
-            stream.on('follow', followed);
         }
     }
 })();

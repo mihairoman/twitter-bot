@@ -8,7 +8,9 @@ module.exports = {
         ' latest',
         ' news',
         ' tips',
-        ' tricks'
+        ' tricks',
+        ' course',
+        ' tutorial'
     ],
     blockedStrings: [
         'porn',

@@ -132,19 +132,17 @@ exports = module.exports = (function() {
     };
 
     var followed = function(event) {
-        console.log('Follow Event now RUNNING')
-            // get USER's twitter handle (screen name)
-        var screenName = event.source.screen_name
+        console.log('Follow Event now RUNNING');
+        // get USER's twitter handle (screen name)
+        var screenName = event.source.screen_name;
 
         // CREATE RANDOM RESPONSE  ============================
         var responseString = rs(),
             find = 'screenName',
             regex = new RegExp(find, 'g');
-        responseString = responseString.replace(regex, screenName)
-        console.log('####################################### RESPONSE STRING', responseString);
-
+        responseString = responseString.replace(regex, screenName);
         // function that replies back to every USER who followed for the first time
-        tweetNow(responseString)
+        tweetNow(responseString);
     };
 
     var tweetNow = function(tweetTxt) {
@@ -169,7 +167,6 @@ exports = module.exports = (function() {
 
     return {
         init: function(retweetFrequency, favoriteFrequency) {
-            console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ STREAM', stream);
             stream.on('follow', followed);
             retweet();
             setInterval(retweet, 1000 * 60 * retweetFrequency);

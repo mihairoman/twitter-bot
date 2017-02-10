@@ -3,9 +3,7 @@ var http = require('http'),
     hostname = '0.0.0.0',
     port = (process.env.PORT || 3000);
 
-var server = http.createServer(function(req, res) {
-
-});
+var server = http.createServer();
 
 server.listen(port, hostname, function() {
     //init with retweet frequency and favorite tweets frequency (in minutes)

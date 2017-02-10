@@ -23,13 +23,13 @@ module.exports = {
         'popular'
     ],
     responseString: [
-        'Hi @screenName thanks for the follow! !CR',
-        '@screenName thanks for following! !CR',
-        'Hey @screenName thanks for the follow! !CR',
-        'Thanks for following @screenName! !CR',
-        'Hey @screenName, thanks for following! !CR',
-        'Awesome @screenName, thanks for following! !CR',
-        'Thanks for the follow @screenName! !CR',
-        'Thanks for following @screenName! Hope you are doing well! !CR'
+        'Hi @screenName thanks for the follow!',
+        '@screenName thanks for following!',
+        'Hey @screenName thanks for the follow!',
+        'Thanks for following @screenName!',
+        'Hey @screenName, thanks for following!',
+        'Awesome @screenName, thanks for following!',
+        'Thanks for the follow @screenName!',
+        'Thanks for following @screenName! Hope you are doing well!'
     ]
 }

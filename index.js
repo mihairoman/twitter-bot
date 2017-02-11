@@ -3,7 +3,18 @@ var http = require('http'),
     hostname = '0.0.0.0',
     port = (process.env.PORT || 3000);
 
-var server = http.createServer();
+var server = http.createServer(function(req, res) {
+    console.log(req.headers);
+
+    res.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
+    res.end('<h1>Service online</h1>');
+});
+
+setInterval(function() {
+    http.get("http://just-a-bot.herokuapp.com");
+}, 300000); // every 5 minutes
 
 server.listen(port, hostname, function() {
     //init with retweet frequency and favorite tweets frequency (in minutes)

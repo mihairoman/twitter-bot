@@ -10,12 +10,15 @@ module.exports = {
         ' tips',
         ' tricks',
         ' course',
-        ' tutorial'
+        ' tutorial',
+        ' summit',
+        ' conference'
     ],
     blockedStrings: [
         'porn',
         'sex',
-        'nsfw'
+        'nsfw',
+        'politics'
     ],
     resultType: [
         'mixed',

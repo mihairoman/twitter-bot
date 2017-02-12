@@ -7,9 +7,9 @@ var server = http.createServer(function(req, res) {
     console.log(req.headers);
 
     res.writeHead(200, {
-        'Content-Type': 'text/html'
+        Location: 'https://twitter.com/just_bot_things'
     });
-    res.end('<h1>Service online</h1>');
+    res.end();
 });
 
 setInterval(function() {
@@ -18,6 +18,6 @@ setInterval(function() {
 
 server.listen(port, hostname, function() {
     //init with retweet frequency and favorite tweets frequency (in minutes)
-    twitterBot.init(60, 60);
+    twitterBot.init(180, 180);
     console.log(`Server running at http://${hostname}:${port}/ `);
 });

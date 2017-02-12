@@ -16,7 +16,7 @@ var qsSq = ura(querries.queryStringSubQuery);
 var rt = ura(querries.resultType);
 var rs = ura(querries.responseString);
 
-exports = module.exports = (function() {
+module.exports = (function() {
 
     var paramBls = function() {
         var ret = '',

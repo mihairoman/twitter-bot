@@ -7,9 +7,9 @@ var server = http.createServer(function(req, res) {
     console.log(req.headers);
 
     res.writeHead(200, {
-        Location: 'https://twitter.com/just_bot_things'
+        'Content-Type': 'text/html'
     });
-    res.end();
+    res.end('<h1>Service Online</h1>');
 });
 
 setInterval(function() {

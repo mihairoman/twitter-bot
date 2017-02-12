@@ -4,8 +4,8 @@
  * access_token
  * access_token_secret
  */
-require('dotenv').config()
-
+var dotenv = require('dotenv');
+dotenv.load();
 module.exports = {
     consumer_key: process.env.CONSUMER_KEY,
     consumer_secret: process.env.CONSUMER_SECRET,
